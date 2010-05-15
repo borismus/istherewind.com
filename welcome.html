@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>is there wind?</title>
+	<meta name="author" content="Boris Smus">
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="screen"/>
+	<!-- Date: 2008-06-01 -->
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="toolbar">
+                {{ user }} | <a href="{{ logout_url }}">sign out</a>
+            </div>
+            <img class="logo" src="/static/images/logo.png" />
+            <div class="subtitle">
+                a notification system for sailors and windsurfers at Jericho Beach, Vancouver Canada
+            </div>
+        </div>
+        <div id="main">
+            {% if windy %}
+            <img src="/static/images/yes.png" title="{{average_speed}} knots" />
+            {% else %}
+            <img src="/static/images/no.png" title="{{average_speed}} knots" />
+            {% endif %}
+            
+            <div class="prefs">
+                {% if updated %}
+                <div class="updated">updated your preferences</div>
+                {% endif %}
+                <form action="/" method="post">
+                    send me email when the wind is at least <input type="text" class="min_speed" name="min_speed" value="{{ min_speed }}"/> knots
+                    <input type="submit" value="OK">
+                    <div></div>
+                </form>
+            </div>
+        </div>
+        <div id="footer">
+            &copy;<a href="http://z3.ca/">z3 media</a>, 2008
+        </div>
+    </div>
+</body>
+</html>

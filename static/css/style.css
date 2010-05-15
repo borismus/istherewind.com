@@ -1,0 +1,63 @@
+div#container
+{
+    font-family: Verdana, Georgia;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40em;
+    border: 2px solid #ddd;
+    padding: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+}
+
+#header 
+{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+#main 
+{
+    text-align: center;
+}
+
+#footer
+{
+    margin-top: 2em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.prefs 
+{
+    margin-top: 2em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    font-size: 0.8em;
+}
+
+.toolbar
+{
+    text-align: right;
+}
+
+.subtitle
+{
+    font-size: 0.8em;
+}
+
+.min_speed
+{
+    width: 4em;
+}
+
+.updated
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px dashed gray;
+    padding: 1em;
+    background: lightyellow;
+    margin-bottom: 1em;
+}
